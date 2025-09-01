@@ -4,7 +4,7 @@
 
 #> systemctl mask ssh.socket && systemctl mask sshd.socket && systemctl disable sshd && systemctl enable ssh && sed -i '15i\Port 4792\n' /etc/ssh/sshd_config
 #> apt-get update -y && apt-get install git curl gnupg -y && apt-get full-upgrade -y && apt-get autoremove -y && reboot
-#> cd /opt && git clone https://github.com/cityplug/macro-pve && mv /opt/macro-pve/### /appdata/###
+#> cd /opt && cd /opt && git clone https://github.com/cityplug/macro-pve && cd macro-pve && mv /opt/macro-pve/### /appdata/###
 #> chmod +x /appdata/###/* && cd /appdata/### && ./run.sh
 
 # --- Install Docker Official GPG key to Apt sources:
