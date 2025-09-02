@@ -20,7 +20,8 @@ read one five fifteen rest < /proc/loadavg
 echo -e "
 ${GREEN}Date...............:${RESET} ${CYAN}`date +"%A, %e %B %Y, %r"` ${RESET}
 ${GREEN}System.............:${RESET} ${CYAN}`uname -nsrmo`${RESET}
-${GREEN}IP Addresses.......:${RESET} ${CYAN}`ip a | grep glo | awk '{print $2}' | head -1 | cut -f1 -d/`${RESET}
+${GREEN}IP Addresses.......:${RESET} ${CYAN}`ip a | grep glo | awk '{print $2}' | head -1 | cut -f1 -d/` and `wget -q -O - http://icanhazip.com/ | tail`${RESET}
+${GREEN}Tailscale IP.......:${RESET} ${CYAN}`tailscale ip -4`${RESET}
 ${GREEN}Uptime.............:${RESET} ${CYAN}${UPTIME}${RESET}
 "
 
